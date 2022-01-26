@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControlInputs : MonoBehaviour
+public class InputManager : MonoBehaviour
 {
     private Vector2 startTouchPosition;
 

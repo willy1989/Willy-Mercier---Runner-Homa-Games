@@ -8,11 +8,10 @@ public class CubeStacker : MonoBehaviour
 
     [SerializeField] private GameObject cubePrefab;
 
-    private Queue<GameObject> cubeStack = new Queue<GameObject>();
+    private List<GameObject> cubeStack = new List<GameObject>();
 
-    private void Start()
+    private void Awake()
     {
-        StackCubeOnTop();
         StackCubeOnTop();
         StackCubeOnTop();
     }
@@ -26,21 +25,13 @@ public class CubeStacker : MonoBehaviour
                                              Quaternion.identity,
                                              characterModel.transform.parent);
 
-        cubeStack.Enqueue(spawnedCube);
+        cubeStack.Add(spawnedCube);
     }
 
-    private void RemoveCubesFromBottom(int cubesToRemove)
+    public void DetachCubeFromStack(GameObject cubeToRemove)
     {
-        for(int i = 0; i < cubesToRemove; i++)
-        {
-            Destroy(cubeStack.Dequeue().gameObject);
-        }
+        cubeToRemove.transform.parent = null;
 
-        characterModel.transform.position -= new Vector3(0f, cubePrefab.transform.localScale.y * cubesToRemove, 0f);
-
-        foreach(GameObject cube in cubeStack)
-        {
-            cube.transform.position -= new Vector3(0f, cubePrefab.transform.localScale.y * cubesToRemove, 0f);
-        }
+        cubeStack.RemoveAt(cubeStack.IndexOf(cubeToRemove));
     }
 }

@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class CharacterCollision : MonoBehaviour
 {
+    [SerializeField] private GameloopManager gameloopManager;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(Constants.Obstacle_TagName) == true)
-            KillCharacter();
-    }
+            gameloopManager.GameOver();
 
-    private void KillCharacter()
-    {
-        Destroy(gameObject);
+        if (other.CompareTag(Constants.EndStep_TagName) == true)
+            gameloopManager.WinGame();
     }
 }

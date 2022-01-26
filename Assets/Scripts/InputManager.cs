@@ -9,6 +9,10 @@ public class InputManager : MonoBehaviour
 
     public Action<float> DragInputEvent;
 
+    public Action FirstTimeTouchEvent;
+
+    private bool firstTimeTouch = false;
+
     private void Update()
     {
         RegisterInput();
@@ -28,6 +32,12 @@ public class InputManager : MonoBehaviour
 
         else if (touch.phase == TouchPhase.Moved)
         {
+            if (firstTimeTouch == false)
+            {
+                FirstTimeTouchEvent();
+                firstTimeTouch = true;
+            }
+
             float dragInput = (touch.position.x - startTouchPosition.x)/Screen.width;
 
             if (DragInputEvent != null)
@@ -35,5 +45,10 @@ public class InputManager : MonoBehaviour
 
             startTouchPosition = touch.position;
         }
+    }
+
+    public void Reset()
+    {
+        firstTimeTouch = false;
     }
 }

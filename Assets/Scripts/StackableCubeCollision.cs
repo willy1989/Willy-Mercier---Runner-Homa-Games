@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class StackableCubeCollision : MonoBehaviour
 {
-    [SerializeField] CharacterMovement characterMovement;
+    CharacterMovement characterMovement;
 
-    [SerializeField] CubeStacker cubeStacker;
+    CubeStacker cubeStacker;
 
     private void Awake()
     {

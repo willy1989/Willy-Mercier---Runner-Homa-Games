@@ -18,10 +18,16 @@ public class CharacterMovement : MonoBehaviour
 
     private float fallSpeed = 8f;
 
+    private bool canMove;
+
+    private Vector3 startPosition;
+
     private void Awake()
     {
         leftBoundary = -((floor.transform.localScale.x/2) - transform.localScale.x/2);
         rightBoundary = ((floor.transform.localScale.x/2) - transform.localScale.x/2);
+
+        startPosition = transform.position;
 
         inputManager.DragInputEvent += MoveLaterally;
     }
@@ -31,13 +37,24 @@ public class CharacterMovement : MonoBehaviour
         MoveForward();
     }
 
+    public void EnableMovement(bool onOff)
+    {
+        canMove = onOff;
+    }
+
     private void MoveForward()
     {
+        if (canMove == false)
+            return;
+
         transform.position += Vector3.forward * forwardSpeed * Time.deltaTime;
     }
 
     private void MoveLaterally(float Xmovement)
     {
+        if (canMove == false)
+            return;
+
         Vector3 newPosition = transform.position + new Vector3(Xmovement, 0f, 0f) * lateralSpeed * Time.deltaTime;
 
         if(newPosition.x <= leftBoundary)
@@ -72,5 +89,10 @@ public class CharacterMovement : MonoBehaviour
         }
 
         transform.position = new Vector3(transform.position.x, startYPosition - YdistanceToFall, transform.position.z);
+    }
+
+    public void Reset()
+    {
+        transform.position = startPosition;
     }
 }

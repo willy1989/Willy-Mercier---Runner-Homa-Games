@@ -628,6 +628,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.Rider.Editor.csproj">
+      <Project>{CC70E99A-94D5-26F6-8AA2-135362F0D67C}</Project>
+      <Name>Unity.Rider.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{89557703-F750-B4DF-250C-7E08B7B47F3B}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{D2BF362F-D060-37DD-F4B8-7EC9FAF06B10}</Project>
+      <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.csproj">
+      <Project>{27120044-EF4F-5001-BFF3-2E3DCC97C7CE}</Project>
+      <Name>Unity.Timeline</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
       <Project>{55686299-4278-8968-E919-E96871EB990A}</Project>
       <Name>Unity.VSCode.Editor</Name>
@@ -636,9 +652,9 @@
       <Project>{B5368483-EAAB-BBC0-7BD6-9F30565DE57A}</Project>
       <Name>Unity.Notifications</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{89557703-F750-B4DF-250C-7E08B7B47F3B}</Project>
-      <Name>Unity.TextMeshPro.Editor</Name>
+    <ProjectReference Include="Unity.Timeline.Editor.csproj">
+      <Project>{8C478571-4A38-FC35-98B0-E9BB84898DEE}</Project>
+      <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
       <Project>{FABA94B7-C7A5-608E-AF2D-9939C9EBAC03}</Project>
@@ -648,29 +664,17 @@
       <Project>{64629B7D-5063-B34E-C776-92848559D1ED}</Project>
       <Name>Unity.Mobile.AndroidLogcat.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{8C478571-4A38-FC35-98B0-E9BB84898DEE}</Project>
-      <Name>Unity.Timeline.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{27120044-EF4F-5001-BFF3-2E3DCC97C7CE}</Project>
-      <Name>Unity.Timeline</Name>
+    <ProjectReference Include="Unity.Notifications.iOS.csproj">
+      <Project>{CA1FA9B8-DBB6-068F-20B6-E8011F226587}</Project>
+      <Name>Unity.Notifications.iOS</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
       <Project>{E2C50FF1-B41F-21C8-1D90-02A90EDD3108}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{D2BF362F-D060-37DD-F4B8-7EC9FAF06B10}</Project>
-      <Name>UnityEditor.UI</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
       <Project>{92AF990B-8E43-13E0-4B54-07C0D9A57C6C}</Project>
       <Name>Unity.PlasticSCM.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{CC70E99A-94D5-26F6-8AA2-135362F0D67C}</Project>
-      <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{F55F2F7D-B5C3-8777-C770-4D5ADBE8754C}</Project>
@@ -679,10 +683,6 @@
     <ProjectReference Include="Unity.Notifications.Android.csproj">
       <Project>{B83531F3-3EE5-0491-80C0-72FCFBD4BF2E}</Project>
       <Name>Unity.Notifications.Android</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Notifications.iOS.csproj">
-      <Project>{CA1FA9B8-DBB6-068F-20B6-E8011F226587}</Project>
-      <Name>Unity.Notifications.iOS</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

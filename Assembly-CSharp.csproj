@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\CharacterMovement.cs" />
+    <Compile Include="Assets\Scripts\CubeStacker.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

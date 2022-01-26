@@ -28,7 +28,7 @@ public class InputManager : MonoBehaviour
 
         else if (touch.phase == TouchPhase.Moved)
         {
-            float dragInput = touch.position.x - startTouchPosition.x;
+            float dragInput = (touch.position.x - startTouchPosition.x)/Screen.width;
 
             if (DragInputEvent != null)
                 DragInputEvent(dragInput);

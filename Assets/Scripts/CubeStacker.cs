@@ -10,12 +10,6 @@ public class CubeStacker : MonoBehaviour
 
     private List<GameObject> cubeStack = new List<GameObject>();
 
-    private void Awake()
-    {
-        StackCubeOnTop();
-        StackCubeOnTop();
-    }
-
     public void StackCubeOnTop()
     {
         characterModel.transform.position += new Vector3(0f, characterModel.transform.localScale.y, 0f);

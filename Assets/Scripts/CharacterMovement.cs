@@ -14,7 +14,7 @@ public class CharacterMovement : MonoBehaviour
 
     private float forwardSpeed = 10f;
 
-    private float lateralSpeed = 1f;
+    private float lateralSpeed = 1000f;
 
     private float fallSpeed = 8f;
 

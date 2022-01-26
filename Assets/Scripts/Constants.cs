@@ -9,5 +9,7 @@ public static class Constants
 
     public const string StackableBlock_TagName = "Stackable block";
 
+    public const string TopObstacle_TagName = "Top obstacle";
+
     #endregion
 }

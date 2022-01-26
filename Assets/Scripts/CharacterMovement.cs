@@ -16,6 +16,8 @@ public class CharacterMovement : MonoBehaviour
 
     private float lateralSpeed = 1f;
 
+    private float fallSpeed = 8f;
+
     private void Awake()
     {
         leftBoundary = -((floor.transform.localScale.x/2) - transform.localScale.x/2);
@@ -45,5 +47,30 @@ public class CharacterMovement : MonoBehaviour
             newPosition = new Vector3(rightBoundary, transform.position.y, transform.position.z);
 
         transform.position = newPosition;
+    }
+
+    public void Fall(float YdistanceToFall)
+    {
+        // Get lowest stackable cube height
+
+        StartCoroutine(FallCoroutine(YdistanceToFall));
+    }
+
+    private IEnumerator FallCoroutine(float YdistanceToFall)
+    {
+        float YdistanceTraveled = 0f;
+
+        float startYPosition = transform.position.y;
+
+        while(YdistanceToFall > YdistanceTraveled)
+        {
+            transform.position += Vector3.down * fallSpeed * Time.deltaTime;
+
+            YdistanceTraveled -= (Vector3.down * fallSpeed * Time.deltaTime).y;
+
+            yield return null;
+        }
+
+        transform.position = new Vector3(transform.position.x, startYPosition - YdistanceToFall, transform.position.z);
     }
 }

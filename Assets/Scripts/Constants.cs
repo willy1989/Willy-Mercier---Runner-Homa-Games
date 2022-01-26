@@ -11,5 +11,7 @@ public static class Constants
 
     public const string TopObstacle_TagName = "Top obstacle";
 
+    public const string BonusBlock_TagName = "Bonus block";
+
     #endregion
 }

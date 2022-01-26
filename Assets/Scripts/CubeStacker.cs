@@ -16,7 +16,7 @@ public class CubeStacker : MonoBehaviour
         StackCubeOnTop();
     }
 
-    private void StackCubeOnTop()
+    public void StackCubeOnTop()
     {
         characterModel.transform.position += new Vector3(0f, characterModel.transform.localScale.y, 0f);
 

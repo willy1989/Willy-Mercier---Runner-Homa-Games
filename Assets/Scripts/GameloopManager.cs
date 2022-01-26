@@ -8,6 +8,8 @@ public class GameloopManager : MonoBehaviour
 
     [SerializeField] private CharacterMovement characterMovement;
 
+    [SerializeField] private CubeStacker cubeStacker;
+
     [SerializeField] private UIManager uiManager;
 
     private void Awake()
@@ -27,10 +29,18 @@ public class GameloopManager : MonoBehaviour
         characterMovement.EnableMovement(onOff: false);
     }
 
+    public void WinGame()
+    {
+        uiManager.ToggleGameWinUI(onOff: true);
+        characterMovement.EnableMovement(onOff: false);
+    }
+
     public void ResetGame()
     {
         inputManager.Reset();
         characterMovement.Reset();
+        cubeStacker.Reset();
+        uiManager.ToggleGameWinUI(onOff: false);
         uiManager.ToggleGameOverUI(onOff: false);
         uiManager.ToggleStartUI(onOff: true);
     }

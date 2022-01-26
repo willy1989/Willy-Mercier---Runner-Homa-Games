@@ -10,6 +10,14 @@ public class CubeStacker : MonoBehaviour
 
     private List<GameObject> cubeStack = new List<GameObject>();
 
+    private Vector3 startPosition;
+
+
+    private void Awake()
+    {
+        startPosition = characterModel.transform.position;
+    }
+
     public void StackCubeOnTop()
     {
         characterModel.transform.position += new Vector3(0f, characterModel.transform.localScale.y, 0f);
@@ -27,5 +35,10 @@ public class CubeStacker : MonoBehaviour
         cubeToRemove.transform.parent = null;
 
         cubeStack.RemoveAt(cubeStack.IndexOf(cubeToRemove));
+    }
+
+    public void Reset()
+    {
+        characterModel.transform.position = startPosition;
     }
 }

@@ -10,5 +10,8 @@ public class CharacterCollision : MonoBehaviour
     {
         if (other.CompareTag(Constants.Obstacle_TagName) == true)
             gameloopManager.GameOver();
+
+        if (other.CompareTag(Constants.EndStep_TagName) == true)
+            gameloopManager.WinGame();
     }
 }

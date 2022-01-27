@@ -49,16 +49,6 @@ public class GameloopManager : MonoBehaviour
 
     public void ResetGame()
     {
-        /*inputManager.Reset();
-        characterMovement.Reset();
-        cubeStacker.Reset();
-        uiManager.ToggleGameWinUI(onOff: false);
-        uiManager.ToggleGameOverUI(onOff: false);
-        uiManager.ToggleStartUI(onOff: true);
-
-        cameraManager.SwitchCamera(Constants.Start_CameraState);
-        */
-
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

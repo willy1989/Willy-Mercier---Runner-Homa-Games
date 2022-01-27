@@ -18,7 +18,9 @@ public class StackableCubeCollision : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if(other.CompareTag(Constants.TopObstacle_TagName) == true)
+        {
             characterMovement.Fall(YdistanceToFall: transform.position.y);
+        }    
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,6 +29,7 @@ public class StackableCubeCollision : MonoBehaviour
         {
             Destroy(other.gameObject);
             cubeStacker.StackCubeOnTop();
+            SoundManager.Instance.PlaySound(soundEffect: SoundEffect.GrabRocket);
         }
     }
 }

@@ -35,6 +35,8 @@ public class CubeStacker : MonoBehaviour
         cubeToRemove.transform.parent = null;
 
         cubeStack.RemoveAt(cubeStack.IndexOf(cubeToRemove));
+
+        SoundManager.Instance.PlaySound(soundEffect: SoundEffect.StackCube);
     }
 
     public void Reset()

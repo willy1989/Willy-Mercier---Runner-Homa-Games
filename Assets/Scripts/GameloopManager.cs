@@ -34,6 +34,7 @@ public class GameloopManager : MonoBehaviour
         uiManager.ToggleGameOverUI(onOff: true);
         characterMovement.EnableMovement(onOff: false);
         astronautAnimation.PlayIdleAnimation();
+        SoundManager.Instance.PlaySound(soundEffect: SoundEffect.Lose);
     }
 
     public void WinGame()
@@ -42,6 +43,7 @@ public class GameloopManager : MonoBehaviour
         characterMovement.EnableMovement(onOff: false);
         cameraManager.SwitchCamera(Constants.End_CameraState);
         astronautAnimation.PlayIdleAnimation();
+        SoundManager.Instance.PlaySound(soundEffect: SoundEffect.Win);
     }
 
     public void ResetGame()

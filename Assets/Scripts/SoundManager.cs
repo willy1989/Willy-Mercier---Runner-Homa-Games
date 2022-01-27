@@ -14,10 +14,17 @@ public class SoundManager : MonoBehaviour
 
     [SerializeField] private AudioSource loseAudioSource;
 
+    public static SoundManager Instance;
+
     private Dictionary<SoundEffect, AudioSource> audioSourceDictionary = new Dictionary<SoundEffect, AudioSource>();
 
     private void Awake()
     {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(this);
+
         audioSourceDictionary.Add(SoundEffect.StackCube, stackCubeAudioSource);
         audioSourceDictionary.Add(SoundEffect.GrabGem, grabGemAudioSource);
         audioSourceDictionary.Add(SoundEffect.GrabRocket, grabRocketAudioSource);
@@ -29,6 +36,8 @@ public class SoundManager : MonoBehaviour
     {
         audioSourceDictionary[soundEffect].Play();
     }
+
+
 }
 
 public enum SoundEffect

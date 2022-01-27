@@ -20,6 +20,7 @@ public class CharacterCollision : MonoBehaviour
         {
             currencyManager.AddGems(quantity: 1);
             other.GetComponent<GemAnimation>().PlayGrabAnimation();
+            SoundManager.Instance.PlaySound(soundEffect: SoundEffect.GrabGem);
         }
     }
 }

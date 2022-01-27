@@ -47,6 +47,14 @@ public class GameloopManager : MonoBehaviour
         SoundManager.Instance.PlaySound(soundEffect: SoundEffect.Win);
     }
 
+    public void EndGame()
+    {
+        uiManager.ToggleEndUI(onOff: true);
+        characterMovement.EnableMovement(onOff: false);
+        astronautAnimation.PlayIdleAnimation();
+        SoundManager.Instance.PlaySound(soundEffect: SoundEffect.Lose);
+    }
+
     public void ResetGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

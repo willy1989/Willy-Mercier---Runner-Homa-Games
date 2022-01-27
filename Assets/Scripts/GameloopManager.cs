@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameloopManager : MonoBehaviour
 {
@@ -48,7 +49,7 @@ public class GameloopManager : MonoBehaviour
 
     public void ResetGame()
     {
-        inputManager.Reset();
+        /*inputManager.Reset();
         characterMovement.Reset();
         cubeStacker.Reset();
         uiManager.ToggleGameWinUI(onOff: false);
@@ -56,5 +57,8 @@ public class GameloopManager : MonoBehaviour
         uiManager.ToggleStartUI(onOff: true);
 
         cameraManager.SwitchCamera(Constants.Start_CameraState);
+        */
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

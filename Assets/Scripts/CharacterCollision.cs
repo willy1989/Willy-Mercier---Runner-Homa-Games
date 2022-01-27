@@ -6,6 +6,8 @@ public class CharacterCollision : MonoBehaviour
 {
     [SerializeField] private GameloopManager gameloopManager;
 
+    [SerializeField] private CurrencyManager currencyManager;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(Constants.Obstacle_TagName) == true)
@@ -13,5 +15,11 @@ public class CharacterCollision : MonoBehaviour
 
         if (other.CompareTag(Constants.EndStep_TagName) == true)
             gameloopManager.WinGame();
+
+        if (other.CompareTag(Constants.Gem_TagName) == true)
+        {
+            currencyManager.AddGems(quantity: 1);
+            Destroy(other.gameObject);
+        }
     }
 }

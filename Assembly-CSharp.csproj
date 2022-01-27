@@ -64,7 +64,8 @@
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\StackableCubeCollision.cs" />
     <Compile Include="Assets\Scripts\CharacterCollision.cs" />
-    <Compile Include="Assets\Scripts\GemAnimation.cs" />
+    <Compile Include="Assets\Scripts\Animation\GemAnimation.cs" />
+    <Compile Include="Assets\Scripts\Animation\AstronautAnimation.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

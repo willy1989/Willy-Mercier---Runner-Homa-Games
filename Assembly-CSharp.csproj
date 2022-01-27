@@ -54,14 +54,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CubeStacker.cs" />
+    <Compile Include="Assets\Scripts\UI\UIManager.cs" />
+    <Compile Include="Assets\Scripts\GameloopManager.cs" />
     <Compile Include="Assets\Scripts\CharacterMovement.cs" />
     <Compile Include="Assets\Scripts\ObstacleCollision.cs" />
     <Compile Include="Assets\Scripts\Constants.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\StackableCubeCollision.cs" />
     <Compile Include="Assets\Scripts\CharacterCollision.cs" />
-    <Compile Include="Assets\Scripts\GameloopManager.cs" />
-    <Compile Include="Assets\Scripts\UI\UIManager.cs" />
+    <Compile Include="Assets\Scripts\CameraManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -682,6 +683,14 @@
     <ProjectReference Include="Unity.Notifications.iOS.csproj">
       <Project>{CA1FA9B8-DBB6-068F-20B6-E8011F226587}</Project>
       <Name>Unity.Notifications.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
+      <Project>{59660DA3-28EF-72D7-95DB-84C8013E1CDD}</Project>
+      <Name>com.unity.cinemachine.editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Cinemachine.csproj">
+      <Project>{3F9129A5-628C-34FB-B506-615C93296008}</Project>
+      <Name>Cinemachine</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

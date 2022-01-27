@@ -17,4 +17,13 @@ public static class Constants
     public const string EndStep_TagName = "End step";
 
     #endregion
+
+
+    #region Animation
+
+    public const string Start_CameraState = "Start camera";
+    public const string Follow_CameraState = "Follow camera";
+    public const string End_CameraState = "End camera";
+
+    #endregion
 }

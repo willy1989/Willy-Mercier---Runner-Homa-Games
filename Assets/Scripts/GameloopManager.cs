@@ -12,6 +12,8 @@ public class GameloopManager : MonoBehaviour
 
     [SerializeField] private UIManager uiManager;
 
+    [SerializeField] private CameraManager cameraManager;
+
     private void Awake()
     {
         inputManager.FirstTimeTouchEvent += StartGame;
@@ -21,6 +23,7 @@ public class GameloopManager : MonoBehaviour
     {
         characterMovement.EnableMovement(onOff: true);
         uiManager.ToggleStartUI(onOff: false);
+        cameraManager.SwitchCamera(Constants.Follow_CameraState);
     }
 
     public void GameOver()
@@ -33,6 +36,7 @@ public class GameloopManager : MonoBehaviour
     {
         uiManager.ToggleGameWinUI(onOff: true);
         characterMovement.EnableMovement(onOff: false);
+        cameraManager.SwitchCamera(Constants.End_CameraState);
     }
 
     public void ResetGame()
@@ -43,5 +47,7 @@ public class GameloopManager : MonoBehaviour
         uiManager.ToggleGameWinUI(onOff: false);
         uiManager.ToggleGameOverUI(onOff: false);
         uiManager.ToggleStartUI(onOff: true);
+
+        cameraManager.SwitchCamera(Constants.Start_CameraState);
     }
 }

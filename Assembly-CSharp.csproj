@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CubeStacker.cs" />
     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
+    <Compile Include="Assets\Scripts\CameraManager.cs" />
     <Compile Include="Assets\Scripts\GameloopManager.cs" />
     <Compile Include="Assets\Scripts\CharacterMovement.cs" />
     <Compile Include="Assets\Scripts\ObstacleCollision.cs" />
@@ -62,7 +63,7 @@
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\StackableCubeCollision.cs" />
     <Compile Include="Assets\Scripts\CharacterCollision.cs" />
-    <Compile Include="Assets\Scripts\CameraManager.cs" />
+    <Compile Include="Assets\Scripts\CurrencyManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -628,9 +629,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Cinemachine.csproj">
+      <Project>{3F9129A5-628C-34FB-B506-615C93296008}</Project>
+      <Name>Cinemachine</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
       <Project>{55686299-4278-8968-E919-E96871EB990A}</Project>
       <Name>Unity.VSCode.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
+      <Project>{59660DA3-28EF-72D7-95DB-84C8013E1CDD}</Project>
+      <Name>com.unity.cinemachine.editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Notifications.csproj">
       <Project>{B5368483-EAAB-BBC0-7BD6-9F30565DE57A}</Project>
@@ -683,14 +692,6 @@
     <ProjectReference Include="Unity.Notifications.iOS.csproj">
       <Project>{CA1FA9B8-DBB6-068F-20B6-E8011F226587}</Project>
       <Name>Unity.Notifications.iOS</Name>
-    </ProjectReference>
-    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
-      <Project>{59660DA3-28EF-72D7-95DB-84C8013E1CDD}</Project>
-      <Name>com.unity.cinemachine.editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Cinemachine.csproj">
-      <Project>{3F9129A5-628C-34FB-B506-615C93296008}</Project>
-      <Name>Cinemachine</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -16,6 +16,8 @@ public static class Constants
 
     public const string EndStep_TagName = "End step";
 
+    public const string Gem_TagName = "Gem";
+
     #endregion
 
 
@@ -26,4 +28,6 @@ public static class Constants
     public const string End_CameraState = "End camera";
 
     #endregion
+
+    public const string GemCount_PlayerPrefs = "Gem count";
 }

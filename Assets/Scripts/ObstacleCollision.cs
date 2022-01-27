@@ -11,7 +11,10 @@ public class ObstacleCollision : MonoBehaviour
             CubeStacker cubeStacker = other.GetComponentInParent<CubeStacker>();
 
             if (cubeStacker != null)
+            {
                 cubeStacker.DetachCubeFromStack(other.gameObject);
+            }
+                
         } 
     }
 }

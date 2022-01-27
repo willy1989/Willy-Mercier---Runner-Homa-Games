@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CurrencyManager : MonoBehaviour
 {
+    public Action<int> UpdateGemCountEvent;
+
     public int GemCount
     {
         get
@@ -13,6 +16,9 @@ public class CurrencyManager : MonoBehaviour
 
         private set
         {
+            if (UpdateGemCountEvent != null)
+                UpdateGemCountEvent.Invoke(value);
+
             PlayerPrefs.SetInt(Constants.GemCount_PlayerPrefs, value);
         }
     }

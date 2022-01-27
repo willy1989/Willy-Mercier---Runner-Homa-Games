@@ -18,6 +18,13 @@ public class InputManager : MonoBehaviour
         RegisterInput();
     }
 
+    private void Start()
+    {
+        QualitySettings.vSyncCount = 1;
+        Application.targetFrameRate = 60;
+
+    }
+
     private void RegisterInput()
     {
         if (Input.touchCount < 1)
@@ -27,7 +34,7 @@ public class InputManager : MonoBehaviour
 
         if (touch.phase == TouchPhase.Began)
         {
-            startTouchPosition = touch.position;
+            startTouchPosition = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 10f));
         }
 
         else if (touch.phase == TouchPhase.Moved)
@@ -38,12 +45,12 @@ public class InputManager : MonoBehaviour
                 firstTimeTouch = true;
             }
 
-            float dragInput = (touch.position.x - startTouchPosition.x)/Screen.width;
+            float dragInput = (Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 10f)).x - startTouchPosition.x);
 
             if (DragInputEvent != null)
                 DragInputEvent(dragInput);
 
-            startTouchPosition = touch.position;
+            startTouchPosition = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 10f));
         }
     }
 

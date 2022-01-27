@@ -11,6 +11,7 @@ ScriptsOnlyBuild:
     - GemAnimation
     - InputManager
     - ObstacleCollision
+    - SoundManager
     - StackableCubeCollision
     - UIManager
     Cinemachine.dll:
@@ -72,6 +73,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 90
@@ -85,59 +90,61 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1516}
+      Script: {instanceID: 1518}
     - Class: 114
-      Script: {instanceID: 1524}
+      Script: {instanceID: 1526}
     - Class: 114
-      Script: {instanceID: 2030}
+      Script: {instanceID: 2032}
     - Class: 114
-      Script: {instanceID: 2050}
+      Script: {instanceID: 2052}
     - Class: 114
-      Script: {instanceID: 2118}
+      Script: {instanceID: 2120}
     - Class: 114
-      Script: {instanceID: 2242}
+      Script: {instanceID: 2244}
     - Class: 114
-      Script: {instanceID: 2252}
+      Script: {instanceID: 2254}
     - Class: 114
-      Script: {instanceID: 2298}
+      Script: {instanceID: 2300}
     - Class: 114
-      Script: {instanceID: 2386}
+      Script: {instanceID: 2388}
     - Class: 114
-      Script: {instanceID: 2394}
+      Script: {instanceID: 2396}
     - Class: 114
-      Script: {instanceID: 2414}
+      Script: {instanceID: 2416}
     - Class: 114
-      Script: {instanceID: 2452}
+      Script: {instanceID: 2454}
     - Class: 114
-      Script: {instanceID: 2522}
+      Script: {instanceID: 2524}
     - Class: 114
-      Script: {instanceID: 2590}
+      Script: {instanceID: 2592}
     - Class: 114
-      Script: {instanceID: 2668}
+      Script: {instanceID: 2670}
     - Class: 114
-      Script: {instanceID: 2786}
+      Script: {instanceID: 2788}
     - Class: 114
-      Script: {instanceID: 2876}
+      Script: {instanceID: 2878}
     - Class: 114
-      Script: {instanceID: 3000}
+      Script: {instanceID: 3002}
     - Class: 114
-      Script: {instanceID: 3044}
+      Script: {instanceID: 3046}
     - Class: 114
-      Script: {instanceID: 3098}
+      Script: {instanceID: 3100}
     - Class: 114
-      Script: {instanceID: 3648}
+      Script: {instanceID: 3368}
     - Class: 114
-      Script: {instanceID: 3712}
+      Script: {instanceID: 3652}
     - Class: 114
-      Script: {instanceID: 3734}
+      Script: {instanceID: 3716}
     - Class: 114
-      Script: {instanceID: 4008}
+      Script: {instanceID: 3738}
     - Class: 114
-      Script: {instanceID: 4164}
+      Script: {instanceID: 4012}
     - Class: 114
-      Script: {instanceID: 4170}
+      Script: {instanceID: 4168}
     - Class: 114
-      Script: {instanceID: 4850}
+      Script: {instanceID: 4174}
+    - Class: 114
+      Script: {instanceID: 4854}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -283,7 +290,7 @@ ScriptsOnlyBuild:
     className: CinemachineCollider
   - hash:
       serializedVersion: 2
-      Hash: 9c6db2fcdb56da50b2f0681cf76bc84b
+      Hash: 44be85833112e602f687d14f53ed01bc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIManager
@@ -607,6 +614,12 @@ ScriptsOnlyBuild:
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
+      Hash: e92c4616ce647810fc5e363dbcb7ae00
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundManager
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -829,7 +842,7 @@ ScriptsOnlyBuild:
     className: RectMask2D
   - hash:
       serializedVersion: 2
-      Hash: 1235cac0a7794db2686482617e834130
+      Hash: dfe3ffbc839d45b62672d5557f2d92a6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CharacterCollision

@@ -18,6 +18,8 @@ public static class Constants
 
     public const string Gem_TagName = "Gem";
 
+    public const string Pod_TagName = "Pod";
+
     #endregion
 
 

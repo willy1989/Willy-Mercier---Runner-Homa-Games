@@ -9,13 +9,13 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private GameloopManager gameLoopManager;
 
-    [SerializeField] private CurrencyManager currencyManager;
-
     [Header("UI elements")]
 
-    [SerializeField] private Button RestartGameButtonGameOverUI;
+    [SerializeField] private Button RestartButtonGameOverUI;
 
-    [SerializeField] private Button RestartGameButtonGameWinUI;
+    [SerializeField] private Button RestartButtonGameWinUI;
+
+    [SerializeField] private Button RestartButtonGameEndUI;
 
     [SerializeField] private GameObject gameOverUI;
 
@@ -23,20 +23,27 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private GameObject gameWinUI;
 
+    [SerializeField] private GameObject endUI;
+
     [SerializeField] private Text gemCountText;
 
     private void Awake()
     {
-        currencyManager.UpdateGemCountEvent += UpdateGemCountText;
+        RestartButtonGameOverUI.onClick.RemoveAllListeners();
+        RestartButtonGameOverUI.onClick.AddListener(gameLoopManager.ResetGame);
 
-        RestartGameButtonGameOverUI.onClick.RemoveAllListeners();
-        RestartGameButtonGameOverUI.onClick.AddListener(gameLoopManager.ResetGame);
+        RestartButtonGameWinUI.onClick.RemoveAllListeners();
+        RestartButtonGameWinUI.onClick.AddListener(gameLoopManager.ResetGame);
 
-        RestartGameButtonGameWinUI.onClick.RemoveAllListeners();
-        RestartGameButtonGameWinUI.onClick.AddListener(gameLoopManager.ResetGame);
+        RestartButtonGameEndUI.onClick.RemoveAllListeners();
+        RestartButtonGameEndUI.onClick.AddListener(gameLoopManager.ResetGame);
+    }
 
+    private void Start()
+    {
+        CurrencyManager.Instance.UpdateGemCountEvent += UpdateGemCountText;
 
-        gemCountText.text = currencyManager.GemCount.ToString();
+        gemCountText.text = CurrencyManager.Instance.GemCount.ToString();
     }
 
     public void ToggleGameOverUI(bool onOff)
@@ -52,6 +59,11 @@ public class UIManager : MonoBehaviour
     public void ToggleGameWinUI(bool onOff)
     {
         gameWinUI.SetActive(onOff);
+    }
+
+    public void ToggleEndUI(bool onOff)
+    {
+        endUI.SetActive(onOff);
     }
 
     public void UpdateGemCountText(int gemCount)

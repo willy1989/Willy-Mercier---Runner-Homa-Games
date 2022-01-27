@@ -7,6 +7,8 @@ public class CurrencyManager : MonoBehaviour
 {
     public Action<int> UpdateGemCountEvent;
 
+    public static CurrencyManager Instance;
+
     public int GemCount
     {
         get
@@ -26,5 +28,13 @@ public class CurrencyManager : MonoBehaviour
     public void AddGems(int quantity)
     {
         GemCount += quantity;
+    }
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(this);
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameloopManager : MonoBehaviour
 {
@@ -46,15 +47,16 @@ public class GameloopManager : MonoBehaviour
         SoundManager.Instance.PlaySound(soundEffect: SoundEffect.Win);
     }
 
+    public void EndGame()
+    {
+        uiManager.ToggleEndUI(onOff: true);
+        characterMovement.EnableMovement(onOff: false);
+        astronautAnimation.PlayIdleAnimation();
+        SoundManager.Instance.PlaySound(soundEffect: SoundEffect.Lose);
+    }
+
     public void ResetGame()
     {
-        inputManager.Reset();
-        characterMovement.Reset();
-        cubeStacker.Reset();
-        uiManager.ToggleGameWinUI(onOff: false);
-        uiManager.ToggleGameOverUI(onOff: false);
-        uiManager.ToggleStartUI(onOff: true);
-
-        cameraManager.SwitchCamera(Constants.Start_CameraState);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

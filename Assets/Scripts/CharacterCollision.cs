@@ -6,21 +6,24 @@ public class CharacterCollision : MonoBehaviour
 {
     [SerializeField] private GameloopManager gameloopManager;
 
-    [SerializeField] private CurrencyManager currencyManager;
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(Constants.Obstacle_TagName) == true)
             gameloopManager.GameOver();
 
         if (other.CompareTag(Constants.EndStep_TagName) == true)
-            gameloopManager.WinGame();
+            gameloopManager.EndGame();
 
         if (other.CompareTag(Constants.Gem_TagName) == true)
         {
-            currencyManager.AddGems(quantity: 1);
+            CurrencyManager.Instance.AddGems(quantity: 1);
             other.GetComponent<GemAnimation>().PlayGrabAnimation();
             SoundManager.Instance.PlaySound(soundEffect: SoundEffect.GrabGem);
+        }
+
+        if (other.CompareTag(Constants.Pod_TagName) == true)
+        {
+            gameloopManager.WinGame();
         }
     }
 }

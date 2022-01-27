@@ -10,6 +10,7 @@ TagManager:
   - Bonus block
   - End step
   - Gem
+  - Pod
   layers:
   - Default
   - TransparentFX

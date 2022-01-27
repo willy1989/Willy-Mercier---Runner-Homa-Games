@@ -14,6 +14,8 @@ public class GameloopManager : MonoBehaviour
 
     [SerializeField] private CameraManager cameraManager;
 
+    [SerializeField] private AstronautAnimation astronautAnimation;
+
     private void Awake()
     {
         inputManager.FirstTimeTouchEvent += StartGame;
@@ -24,12 +26,14 @@ public class GameloopManager : MonoBehaviour
         characterMovement.EnableMovement(onOff: true);
         uiManager.ToggleStartUI(onOff: false);
         cameraManager.SwitchCamera(Constants.Follow_CameraState);
+        astronautAnimation.PlayRunAnimation();
     }
 
     public void GameOver()
     {
         uiManager.ToggleGameOverUI(onOff: true);
         characterMovement.EnableMovement(onOff: false);
+        astronautAnimation.PlayIdleAnimation();
     }
 
     public void WinGame()
@@ -37,6 +41,7 @@ public class GameloopManager : MonoBehaviour
         uiManager.ToggleGameWinUI(onOff: true);
         characterMovement.EnableMovement(onOff: false);
         cameraManager.SwitchCamera(Constants.End_CameraState);
+        astronautAnimation.PlayIdleAnimation();
     }
 
     public void ResetGame()

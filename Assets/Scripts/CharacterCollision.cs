@@ -19,7 +19,7 @@ public class CharacterCollision : MonoBehaviour
         if (other.CompareTag(Constants.Gem_TagName) == true)
         {
             currencyManager.AddGems(quantity: 1);
-            Destroy(other.gameObject);
+            other.GetComponent<GemAnimation>().PlayGrabAnimation();
         }
     }
 }

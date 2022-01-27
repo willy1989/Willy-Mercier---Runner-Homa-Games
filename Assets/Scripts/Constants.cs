@@ -30,4 +30,10 @@ public static class Constants
     #endregion
 
     public const string GemCount_PlayerPrefs = "Gem count";
+
+    public const string GemGrabbed_AnimationTrigger = "Grabbed";
+
+    public const string AstronautIdle_AnimationTrigger = "Idle";
+
+    public const string AstronautRun_AnimationTrigger = "Run";
 }

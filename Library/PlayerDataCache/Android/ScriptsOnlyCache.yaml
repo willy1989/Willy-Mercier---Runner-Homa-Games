@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - GameloopManager
     - GemAnimation
     - InputManager
+    - ObjectGrabber
     - ObstacleCollision
     - SoundManager
     - StackableCubeCollision
@@ -22,8 +23,6 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachineStateDrivenCamera
     - Cinemachine.CinemachineTransposer
     - Cinemachine.CinemachineVirtualCamera
-    Unity.Mobile.AndroidLogcat.Editor.dll:
-    - Unity.Android.Logcat.AndroidLogcatManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
@@ -147,6 +146,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 4172}
     - Class: 114
       Script: {instanceID: 4852}
+    - Class: 114
+      Script: {instanceID: 80016}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -292,7 +293,7 @@ ScriptsOnlyBuild:
     className: CinemachineCollider
   - hash:
       serializedVersion: 2
-      Hash: 44be85833112e602f687d14f53ed01bc
+      Hash: 2ee395b9aa7c8c39c642d844c697fa6b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIManager
@@ -352,7 +353,7 @@ ScriptsOnlyBuild:
     className: CinemachinePostProcessing
   - hash:
       serializedVersion: 2
-      Hash: 24e052648e2183bc7283968b713f37d7
+      Hash: e87d6141a7bb70b11d1f9d5c4f0ea0db
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameloopManager
@@ -370,7 +371,7 @@ ScriptsOnlyBuild:
     className: GemAnimation
   - hash:
       serializedVersion: 2
-      Hash: b220ddac72159e547456f991242f3bbb
+      Hash: 6af9084df8168d9380cb6449f44939fc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CharacterMovement
@@ -844,7 +845,7 @@ ScriptsOnlyBuild:
     className: RectMask2D
   - hash:
       serializedVersion: 2
-      Hash: dfe3ffbc839d45b62672d5557f2d92a6
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CharacterCollision
@@ -962,6 +963,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineBlendListCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ObjectGrabber
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

@@ -22,6 +22,4 @@ public class StackableCubeCollision : MonoBehaviour
             characterMovement.Fall(YdistanceToFall: transform.position.y);
         }    
     }
-
-    
 }

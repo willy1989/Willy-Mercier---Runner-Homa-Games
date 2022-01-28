@@ -22,6 +22,8 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachineStateDrivenCamera
     - Cinemachine.CinemachineTransposer
     - Cinemachine.CinemachineVirtualCamera
+    Unity.Mobile.AndroidLogcat.Editor.dll:
+    - Unity.Android.Logcat.AndroidLogcatManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
@@ -90,61 +92,61 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1518}
+      Script: {instanceID: 1516}
     - Class: 114
-      Script: {instanceID: 1526}
+      Script: {instanceID: 1524}
     - Class: 114
-      Script: {instanceID: 2032}
+      Script: {instanceID: 2030}
     - Class: 114
-      Script: {instanceID: 2052}
+      Script: {instanceID: 2050}
     - Class: 114
-      Script: {instanceID: 2120}
+      Script: {instanceID: 2118}
     - Class: 114
-      Script: {instanceID: 2244}
+      Script: {instanceID: 2242}
     - Class: 114
-      Script: {instanceID: 2254}
+      Script: {instanceID: 2252}
     - Class: 114
-      Script: {instanceID: 2300}
+      Script: {instanceID: 2298}
     - Class: 114
-      Script: {instanceID: 2388}
+      Script: {instanceID: 2386}
     - Class: 114
-      Script: {instanceID: 2396}
+      Script: {instanceID: 2394}
     - Class: 114
-      Script: {instanceID: 2416}
+      Script: {instanceID: 2414}
     - Class: 114
-      Script: {instanceID: 2454}
+      Script: {instanceID: 2452}
     - Class: 114
-      Script: {instanceID: 2524}
+      Script: {instanceID: 2522}
     - Class: 114
-      Script: {instanceID: 2592}
+      Script: {instanceID: 2590}
     - Class: 114
-      Script: {instanceID: 2670}
+      Script: {instanceID: 2668}
     - Class: 114
-      Script: {instanceID: 2788}
+      Script: {instanceID: 2786}
     - Class: 114
-      Script: {instanceID: 2878}
+      Script: {instanceID: 2876}
     - Class: 114
-      Script: {instanceID: 3002}
+      Script: {instanceID: 3000}
     - Class: 114
-      Script: {instanceID: 3046}
+      Script: {instanceID: 3044}
     - Class: 114
-      Script: {instanceID: 3100}
+      Script: {instanceID: 3098}
     - Class: 114
-      Script: {instanceID: 3368}
+      Script: {instanceID: 3366}
     - Class: 114
-      Script: {instanceID: 3652}
+      Script: {instanceID: 3650}
     - Class: 114
-      Script: {instanceID: 3716}
+      Script: {instanceID: 3714}
     - Class: 114
-      Script: {instanceID: 3738}
+      Script: {instanceID: 3736}
     - Class: 114
-      Script: {instanceID: 4012}
+      Script: {instanceID: 4010}
     - Class: 114
-      Script: {instanceID: 4168}
+      Script: {instanceID: 4166}
     - Class: 114
-      Script: {instanceID: 4174}
+      Script: {instanceID: 4172}
     - Class: 114
-      Script: {instanceID: 4854}
+      Script: {instanceID: 4852}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128

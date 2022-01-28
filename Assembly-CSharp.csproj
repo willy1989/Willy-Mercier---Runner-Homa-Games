@@ -53,20 +53,21 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\CubeStacker.cs" />
+    <Compile Include="Assets\Scripts\Main character\CubeStacker.cs" />
     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
-    <Compile Include="Assets\Scripts\CameraManager.cs" />
-    <Compile Include="Assets\Scripts\GameloopManager.cs" />
+    <Compile Include="Assets\Scripts\Singletons\CameraManager.cs" />
+    <Compile Include="Assets\Scripts\Singletons\GameloopManager.cs" />
     <Compile Include="Assets\Scripts\Animation\GemAnimation.cs" />
-    <Compile Include="Assets\Scripts\CharacterMovement.cs" />
+    <Compile Include="Assets\Scripts\Main character\CharacterMovement.cs" />
     <Compile Include="Assets\Scripts\ObstacleCollision.cs" />
-    <Compile Include="Assets\Scripts\CurrencyManager.cs" />
-    <Compile Include="Assets\Scripts\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\Singletons\CurrencyManager.cs" />
+    <Compile Include="Assets\Scripts\Singletons\SoundManager.cs" />
     <Compile Include="Assets\Scripts\Constants.cs" />
-    <Compile Include="Assets\Scripts\InputManager.cs" />
+    <Compile Include="Assets\Scripts\Singletons\InputManager.cs" />
     <Compile Include="Assets\Scripts\Animation\AstronautAnimation.cs" />
-    <Compile Include="Assets\Scripts\StackableCubeCollision.cs" />
-    <Compile Include="Assets\Scripts\CharacterCollision.cs" />
+    <Compile Include="Assets\Scripts\Main character\StackableCubeCollision.cs" />
+    <Compile Include="Assets\Scripts\Main character\CharacterCollision.cs" />
+    <Compile Include="Assets\Scripts\Singletons\Singleton.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

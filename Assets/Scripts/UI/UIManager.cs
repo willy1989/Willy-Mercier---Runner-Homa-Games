@@ -3,12 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIManager : MonoBehaviour
+public class UIManager : Singleton<UIManager>
 {
-    [Header("Dependencies")]
-
-    [SerializeField] private GameloopManager gameLoopManager;
-
     [Header("UI elements")]
 
     [SerializeField] private Button RestartButtonGameOverUI;
@@ -29,18 +25,20 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        RestartButtonGameOverUI.onClick.RemoveAllListeners();
-        RestartButtonGameOverUI.onClick.AddListener(gameLoopManager.ResetGame);
-
-        RestartButtonGameWinUI.onClick.RemoveAllListeners();
-        RestartButtonGameWinUI.onClick.AddListener(gameLoopManager.ResetGame);
-
-        RestartButtonGameEndUI.onClick.RemoveAllListeners();
-        RestartButtonGameEndUI.onClick.AddListener(gameLoopManager.ResetGame);
+        SetInstance(); 
     }
 
     private void Start()
     {
+        RestartButtonGameOverUI.onClick.RemoveAllListeners();
+        RestartButtonGameOverUI.onClick.AddListener(GameloopManager.Instance.ResetGame);
+
+        RestartButtonGameWinUI.onClick.RemoveAllListeners();
+        RestartButtonGameWinUI.onClick.AddListener(GameloopManager.Instance.ResetGame);
+
+        RestartButtonGameEndUI.onClick.RemoveAllListeners();
+        RestartButtonGameEndUI.onClick.AddListener(GameloopManager.Instance.ResetGame);
+
         CurrencyManager.Instance.UpdateGemCountEvent += UpdateGemCountText;
 
         gemCountText.text = CurrencyManager.Instance.GemCount.ToString();

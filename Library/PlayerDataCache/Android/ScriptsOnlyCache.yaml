@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - GameloopManager
     - GemAnimation
     - InputManager
+    - ObjectGrabber
     - ObstacleCollision
     - SoundManager
     - StackableCubeCollision
@@ -90,61 +91,63 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1518}
+      Script: {instanceID: 1516}
     - Class: 114
-      Script: {instanceID: 1526}
+      Script: {instanceID: 1524}
     - Class: 114
-      Script: {instanceID: 2032}
+      Script: {instanceID: 2030}
     - Class: 114
-      Script: {instanceID: 2052}
+      Script: {instanceID: 2050}
     - Class: 114
-      Script: {instanceID: 2120}
+      Script: {instanceID: 2118}
     - Class: 114
-      Script: {instanceID: 2244}
+      Script: {instanceID: 2242}
     - Class: 114
-      Script: {instanceID: 2254}
+      Script: {instanceID: 2252}
     - Class: 114
-      Script: {instanceID: 2300}
+      Script: {instanceID: 2298}
     - Class: 114
-      Script: {instanceID: 2388}
+      Script: {instanceID: 2386}
     - Class: 114
-      Script: {instanceID: 2396}
+      Script: {instanceID: 2394}
     - Class: 114
-      Script: {instanceID: 2416}
+      Script: {instanceID: 2414}
     - Class: 114
-      Script: {instanceID: 2454}
+      Script: {instanceID: 2452}
     - Class: 114
-      Script: {instanceID: 2524}
+      Script: {instanceID: 2522}
     - Class: 114
-      Script: {instanceID: 2592}
+      Script: {instanceID: 2590}
     - Class: 114
-      Script: {instanceID: 2670}
+      Script: {instanceID: 2668}
     - Class: 114
-      Script: {instanceID: 2788}
+      Script: {instanceID: 2786}
     - Class: 114
-      Script: {instanceID: 2878}
+      Script: {instanceID: 2876}
     - Class: 114
-      Script: {instanceID: 3002}
+      Script: {instanceID: 3000}
     - Class: 114
-      Script: {instanceID: 3046}
+      Script: {instanceID: 3044}
     - Class: 114
-      Script: {instanceID: 3100}
+      Script: {instanceID: 3098}
     - Class: 114
-      Script: {instanceID: 3368}
+      Script: {instanceID: 3366}
     - Class: 114
-      Script: {instanceID: 3652}
+      Script: {instanceID: 3650}
     - Class: 114
-      Script: {instanceID: 3716}
+      Script: {instanceID: 3714}
     - Class: 114
-      Script: {instanceID: 3738}
+      Script: {instanceID: 3736}
     - Class: 114
-      Script: {instanceID: 4012}
+      Script: {instanceID: 4010}
     - Class: 114
-      Script: {instanceID: 4168}
+      Script: {instanceID: 4166}
     - Class: 114
-      Script: {instanceID: 4174}
+      Script: {instanceID: 4172}
     - Class: 114
-      Script: {instanceID: 4854}
+      Script: {instanceID: 4852}
+    - Class: 114
+      Script: {instanceID: 80016}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -290,7 +293,7 @@ ScriptsOnlyBuild:
     className: CinemachineCollider
   - hash:
       serializedVersion: 2
-      Hash: 44be85833112e602f687d14f53ed01bc
+      Hash: 2ee395b9aa7c8c39c642d844c697fa6b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIManager
@@ -350,7 +353,7 @@ ScriptsOnlyBuild:
     className: CinemachinePostProcessing
   - hash:
       serializedVersion: 2
-      Hash: 24e052648e2183bc7283968b713f37d7
+      Hash: e87d6141a7bb70b11d1f9d5c4f0ea0db
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameloopManager
@@ -368,7 +371,7 @@ ScriptsOnlyBuild:
     className: GemAnimation
   - hash:
       serializedVersion: 2
-      Hash: b220ddac72159e547456f991242f3bbb
+      Hash: 6af9084df8168d9380cb6449f44939fc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CharacterMovement
@@ -842,7 +845,7 @@ ScriptsOnlyBuild:
     className: RectMask2D
   - hash:
       serializedVersion: 2
-      Hash: dfe3ffbc839d45b62672d5557f2d92a6
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CharacterCollision
@@ -960,6 +963,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineBlendListCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ObjectGrabber
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

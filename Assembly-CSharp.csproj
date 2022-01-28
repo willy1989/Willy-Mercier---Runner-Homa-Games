@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Main character\StackableCubeCollision.cs" />
     <Compile Include="Assets\Scripts\Main character\CharacterCollision.cs" />
     <Compile Include="Assets\Scripts\Singletons\Singleton.cs" />
+    <Compile Include="Assets\Scripts\Main character\ObjectGrabber.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
